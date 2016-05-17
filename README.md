@@ -5,7 +5,7 @@ Home: https://www.gnu.org/software/bison/
 
 Package license: GPL 3
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: General purpose parser generator converting annotated context-free grammar to a deterministic LR/GLR parser.
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/bison-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/bison-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/bison-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/bison-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/bison-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/bison-feedstock/branch/master)
