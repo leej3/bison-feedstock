@@ -30,7 +30,14 @@ test:
 about:
   home: https://www.gnu.org/software/bison/
   license: GPL 3
+  license_file: COPYING
   summary: General purpose parser generator converting annotated context-free grammar to a deterministic LR/GLR parser.
+  description: |
+    Bison is a general-purpose parser generator that converts an annotated
+    context-free grammar into a deterministic LR or generalized LR (GLR) parser
+    employing LALR(1) parser tables.
+  dev_url: https://git.savannah.gnu.org/git/bison.git
+  doc_url: http://savannah.gnu.org/projects/bison/
 
 extra:
   recipe-maintainers:
