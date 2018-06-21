@@ -1,4 +1,4 @@
-{% set version = "3.0.4" %}
+{% set version = "3.0.5" %}
 
 package:
   name: bison
@@ -7,19 +7,11 @@ package:
 source:
   fn: bison-{{ version }}.tar.gz
   url: http://ftp.gnu.org/gnu/bison/bison-{{ version }}.tar.gz
-  md5: a586e11cd4aff49c3ff6d3b6a4c9ccf8
-  patches:
-    # snprintf intentionally crashes on macOS 10.13 when the
-    # formatting string contains %n and is dynamically allocated
-    # See: https://github.com/Homebrew/homebrew-core/blob/master/Formula/bison.rb
-    #    : http://lists.gnu.org/archive/html/bug-bison/2017-09/msg00001.html
-    #    : https://stackoverflow.com/a/46734110/3257826
-    # Patch from https://raw.githubusercontent.com/macports/macports-ports/14451f57e89/devel/bison/files/secure_snprintf.patch
-    - secure_snprintf.patch
+  md5: 41ad57813157b61bfa47e33067a9d6f0
 
 build:
   skip: true  # [win]
-  number: 2
+  number: 0
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -29,6 +21,7 @@ requirements:
     - m4
     - flex
     - perl
+    - make
 
 test:
   commands:
