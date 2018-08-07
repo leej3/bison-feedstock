@@ -3,7 +3,7 @@ About bison
 
 Home: https://www.gnu.org/software/bison/
 
-Package license: GPL 3
+Package license: GPL-3.0
 
 Feedstock license: BSD 3-Clause
 
