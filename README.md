@@ -1,14 +1,21 @@
+<!--
+# -*- mode: jinja -*-
+-->
+
 About bison
 ===========
 
 Home: https://www.gnu.org/software/bison/
 
-Package license: GPL-3.0
+Package license: GPL 3
 
 Feedstock license: BSD 3-Clause
 
 Summary: General purpose parser generator converting annotated context-free grammar to a deterministic LR/GLR parser.
 
+Bison is a general-purpose parser generator that converts an annotated
+context-free grammar into a deterministic LR or generalized LR (GLR) parser
+employing LALR(1) parser tables.
 
 
 Current build status
@@ -49,6 +56,8 @@ conda search bison --channel conda-forge
 
 About conda-forge
 =================
+
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -104,3 +113,11 @@ In order to produce a uniquely identifiable distribution:
  * If the version of a package **is** being increased, please remember to return
    the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
    back to 0.
+
+Feedstock Maintainers
+=====================
+
+* [@jakirkham](https://github.com/jakirkham/)
+* [@mingwandroid](https://github.com/mingwandroid/)
+* [@ocefpaf](https://github.com/ocefpaf/)
+
