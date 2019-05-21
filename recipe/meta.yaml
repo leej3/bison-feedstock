@@ -30,7 +30,7 @@ test:
 
 about:
   home: https://www.gnu.org/software/bison/
-  license: GPL 3
+  license: GPL-3.0
   license_file: COPYING
   summary: General purpose parser generator converting annotated context-free grammar to a deterministic LR/GLR parser.
   description: |
