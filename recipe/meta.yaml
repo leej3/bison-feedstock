@@ -22,7 +22,7 @@ requirements:
     - make
   host:
     - flex
-  run
+  run:
     - m4
 
 test:
