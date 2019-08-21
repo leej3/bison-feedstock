@@ -23,7 +23,7 @@ requirements:
   host:
     - flex
   run:
-    - m4
+    - flex
 
 test:
   commands:
