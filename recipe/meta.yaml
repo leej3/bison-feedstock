@@ -21,6 +21,7 @@ requirements:
     - m4
     - perl
     - make
+    - flex   # [build_platform != target_platform]
   host:
     - flex
   run:
