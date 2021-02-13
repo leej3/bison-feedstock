@@ -9,23 +9,33 @@ source:
   sha256: ee1cc06f5e3d8615a5209cefaa2acd3da59b286d4d923cb6db5e6dbfae7a6c11
 
 build:
-  skip: true  # [win]
+{% if bootstrapping == 'yes' %}
+  # Please increment by two
+  number: 0
+  string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}_bootstrapping
+{% else %}
+  # Keep above the number of the _bootstrapping package
   number: 1
+{% endif %}
+  skip: true  # [win]
   detect_binary_files_with_prefix: true
+  script_env:
+    - BOOTSTRAPPING={{ bootstrapping }}
 
 requirements:
   build:
-    - libtool  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+{% if bootstrapping != 'yes' %}
+    - libtool  # [unix]
     - m4
     - perl
     - make
-    - flex   # [build_platform != target_platform]
   host:
     - flex
   run:
     - flex
+{% endif %}
 
 test:
   commands:

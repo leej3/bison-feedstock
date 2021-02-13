@@ -1,8 +1,11 @@
 #!/bin/bash
-# Get an updated config.sub and config.guess
-cp $BUILD_PREFIX/share/libtool/build-aux/config.* ./build-aux
 
-export PERL=${BUILD_PREFIX}/bin/perl
+if [[ ! $BOOTSTRAPPING == yes ]]; then
+  # Get an updated config.sub and config.guess
+  cp $BUILD_PREFIX/share/libtool/build-aux/config.* ./build-aux
+
+  export PERL=${BUILD_PREFIX}/bin/perl
+fi
 
 if [[ ${HOST} =~ .*linux.* ]]; then
   export CFLAGS="${CFLAGS} -lrt"
@@ -13,8 +16,9 @@ M4=m4 \
 make -j${CPU_COUNT} ${VERBOSE_AT}
 
 if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
-make check
+  make check
 fi
+
 make install
 
 strings ${PREFIX}/bin/bison | grep ${BUILD_PREFIX}/bin/m4 || exit 0
